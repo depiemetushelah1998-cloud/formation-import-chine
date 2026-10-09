@@ -1,0 +1,97 @@
+﻿/* ============================================================
+   LAYOUT — Header, navigation, hero, sections structurelles,
+             footer, bouton flottant
+   ============================================================ */
+
+/* Bandeau promo */
+.bar {
+  background: var(--accent);
+  color: var(--aink);
+  text-align: center;
+  padding: 9px 16px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* Header sticky */
+header {
+  background: var(--marine);
+  color: var(--on);
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+}
+
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  gap: 16px;
+}
+
+.logo {
+  font: 800 1rem var(--h);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  font-size: 0.92rem;
+}
+
+nav a { text-decoration: none; opacity: 0.85; }
+nav a:hover { opacity: 1; }
+
+/* Section héro */
+.hero {
+  background: var(--marine);
+  color: var(--on);
+  padding: 64px 0 72px;
+  overflow: hidden;
+}
+
+.hero p.lead { color: var(--soft); font-size: 1.15rem; }
+
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+
+/* Carte trajet SVG */
+.route {
+  margin-top: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.04);
+  overflow-x: auto;
+}
+
+.route svg { display: block; min-width: 580px; width: 100%; height: auto; }
+
+/* Bande plateformes */
+.plat {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 30px 0;
+}
+
+.plat p { margin: 0 0 14px; color: var(--muted); font-size: 0.9rem; }
+
+.logos { display: flex; flex-wrap: wrap; gap: 12px; }
+.logos svg { height: 44px; width: auto; border-radius: 8px; }
+
+/* Section finale (CTA dark) */
+.final { background: var(--marine); color: var(--on); }
+.final p { color: var(--soft); }
+
+/* Pied de page */
+footer { padding: 28px 0; color: var(--muted); font-size: 0.85rem; }
+
+/* Bouton WhatsApp flottant */
+.fab {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 20;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 6px 18px;
+}

@@ -1,0 +1,49 @@
+﻿/* ============================================================
+   DESIGN TOKENS — Couleurs, typographies, safe areas
+   ============================================================ */
+
+:root {
+  /* Couleurs */
+  --bg:      #F2F5F6;
+  --surface: #fff;
+  --ink:     #10222E;
+  --muted:   #4D6272;
+  --line:    #D6DEE3;
+  --marine:  #0F2B3D;
+  --on:      #EAF1F5;
+  --soft:    #B9CAD6;
+  --accent:  #E8590C;
+  --aink:    #fff;
+
+  /* Typographies */
+  --h: 'Bricolage Grotesque', Georgia, serif;
+  --b: 'Public Sans', system-ui, sans-serif;
+
+  /* Safe areas iOS */
+  padding-top:    env(safe-area-inset-top,    0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Thème sombre automatique (préférence système) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:      #0B1A24;
+    --surface: #12293A;
+    --ink:     #EAF1F5;
+    --muted:   #9FB3C1;
+    --line:    #24404F;
+    --marine:  #071520;
+    --accent:  #FF7A33;
+  }
+}
+
+/* Thème sombre forcé via attribut data-theme */
+:root[data-theme="dark"] {
+  --bg:      #0B1A24;
+  --surface: #12293A;
+  --ink:     #EAF1F5;
+  --muted:   #9FB3C1;
+  --line:    #24404F;
+  --marine:  #071520;
+  --accent:  #FF7A33;
+}
